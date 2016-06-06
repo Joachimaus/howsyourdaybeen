@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <title>RIAA Form</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#riaa-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+            RIAA
+          </a>
+            </div>
+            <!-- Collect the nav links, forms, and other contents for toggling -->
+            <div class="collapse navbar-collapse" id="riaa-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/administrators/menu">Menu</a></li>
+                    <li><a href="/administrators">All Administrators</a></li>
+                    <li><a href="/members">All Members</a></li>
+                    <li><a href="/products">All Products</a></li>
+                    <li><a href="/reports/usage">Usage Reports</a></li>
+                    <li><a rel="nofollow" data-method="delete" href="/administrators/sign_out">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>New Product</h1>
+                <form class="generic-form" id="new_product" accept-charset="UTF-8" method="post">
+                    <div class="form-group">
+                        <label for="product_member">Member</label>
+                        <br>
+                        <select class="form-control" name="product[member_id]" id="product_member_id">
+                            <option value="">Please select a member</option>
+                            <option>Bednar, Bashirian and Daniel Inc</option>
+                            <option>Batz, Strosin and Kuvalis LLC</option>
+                            <option>Code Nation</option>
+                            <option>Pangea</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product_name">Name</label>
+                        <br>
+                        <input class="form-control" type="text" name="product[name]" id="product_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="product_member">Product Category</label>
+                        <br>
+                        <select class="form-control" name="product[member_id]" id="product_member_id">
+                            <option value="">Product Category</option>
+                            <option value="">Superannuation - Superfund Option</option>
+                            <option value="">Superannuation - Kiwi Saver (NZ Only)</option>
+                            <option value="">Superannuation - Superfund - Whole of fund</option>
+                            <option value="">Investment - Fund/Trust</option>
+                            <option value="">Investment - Exchange Trade Fund</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product_product_category">Product Type</label>
+                        <br>
+                        <div class="checkbox-inline">
+                            <label for="type_1">
+                                <input class="checkbox" type="checkbox" id="type_1"> Superannuation - Superfund options
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label for="type_2">
+                                <input class="checkbox" type="checkbox" id="type_2"> KiwiSaver
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label for="type_3">
+                                <input class="checkbox" type="checkbox" id="type_3"> Superfund whole of fund
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label for="type_4">
+                                <input class="checkbox" type="checkbox" id="type_4"> Investment - Fund / Trust
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label for="type_5">
+                                <input class="checkbox" type="checkbox" id="type_5"> Investment - Exchange Traded Fund
+                            </label>
+                        </div>
+
+
+                    <div class="form-group">
+                        <label for="product_product_category">Product Target</label>
+                        <br>
+                        <div class="checkbox-inline">
+                            <label for="target_retail">
+                                <input class="checkbox" type="checkbox" id="target_retail"> Retail
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label for="target_institutional">
+                                <input class="checkbox" type="checkbox" id="target_institutional"> Institutional
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label for="target_wholesale">
+                                <input class="checkbox" type="checkbox" id="target_wholesale"> Wholesale
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label for="target_adviser">
+                                <input class="checkbox" type="checkbox" id="target_adviser"> Adviser
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="product_product_asset_class">Product Asset Class</label>
+                            <br>
+                            <div class="checkbox-inline">
+                                <label for="domestic_equities">
+                                    <input class="checkbox" type="checkbox" id="domestic_equities"> Domestic Equities
+                                </label>
+                            </div>
+                            <div class="checkbox-inline">
+                                <label for="international_equities">
+                                    <input class="checkbox" type="checkbox" id="international_equities"> International Equities
+                                </label>
+                            </div>
+                            <div class="checkbox-inline">
+                                <label for="fixed_income">
+                                    <input class="checkbox" type="checkbox" id="fixed_income"> Fixed Income
+                                </label>
+                            </div>
+                            <div class="checkbox-inline">
+                                <label for="cash">
+                                    <input class="checkbox" type="checkbox" id="cash"> Cash
+                                </label>
+                            </div>
+                            <div class="checkbox-inline">
+                                <label for="property">
+                                    <input class="checkbox" type="checkbox" id="property"> Property
+                                </label>
+                            </div>
+                            <div class="checkbox-inline">
+                                <label for="other">
+                                    <input class="checkbox" type="checkbox" id="other"> Other
+                                </label>
+                            </div>
+                            <input type="hidden" name="product[product_asset_class_ids][]" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="product_product_certification_symbol">Product Certification Symbol</label>
+                            <br>
+                            <div class="checkbox-inline">
+                                <label for="certification_ethical">
+                                    <input class="checkbox" type="checkbox" id="certification_ethical"> Ethical
+                                </label>
+                            </div>
+                            <div class="checkbox-inline">
+                                <label for="certification_sri">
+                                    <input class="checkbox" type="checkbox" id="certification_sri"> SRI
+                                </label>
+                            </div>
+                            <div class="checkbox-inline">
+                                <label for="certification_ri">
+                                    <input class="checkbox" type="checkbox" id="certification_ri"> RI
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="product_product_market">Product Market</label>
+                                <br>
+                                <div class="checkbox-inline">
+                                    <label for="market_australia">
+                                        <input class="checkbox" type="checkbox" id="market_australia"> Australia
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline">
+                                    <label for="market_newzealand">
+                                        <input class="checkbox" type="checkbox" id="market_newzealand"> New Zealand
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline">
+                                    <label for="market_other">
+                                        <input class="checkbox" type="checkbox" id="market_other"> Other
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="product_product_overview">Product overview</label>
+                                    <br>
+                                    <textarea class="form-control" name="product[product_overview]" id="product_product_overview"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="product_full_description">Full description (This will be a WYSIWYG editor)</label>
+                                    <br>
+                                    <textarea rows="5" name="product[full_description]" id="product_full_description" aria-hidden="true" class="form-control"></textarea>
+                                </div>
+
+
+
+
+
+                                <div class="form-group">
+                                    <label for="product_certification_category">Certification category</label>
+                                    <br>
+                                    <input class="form-control" type="text" name="product[certification_category]" id="product_certification_category">
+                                </div>
+                                <div class="form-group">
+                                    <label for="product_certified_since">Certified since</label>
+                                    <br>
+                                    <input class="form-control" type="text" name="product[certified_since]" id="product_certified_since">
+                                </div>
+                                <div class="form-group">
+                                    <label for="product_investment_approach">Investment approach</label>
+                                    <br>
+                                    <select class="form-control" name="product[investment_approach]" id="product_investment_approach">
+                                        <option value="">Please select the investment approach</option>
+                                        <option value="true">Positive Screening</option>
+                                        <option value="false">Negative Screening</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="product_product_exclusion">Product exclusion</label>
+                                    <br>
+                                    <div class="checkbox-inline">
+                                        <label for="exclusion_fossilfuels">
+                                            <input class="checkbox" type="checkbox" id="exclusion_fossilfuels"> Fossil fuels
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <label for="exclusion_weapons">
+                                            <input class="checkbox" type="checkbox" id="exclusion_weapons"> Weapons
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <label for="exclusion_tabacco">
+                                            <input class="checkbox" type="checkbox" id="exclusion_tabacco"> Tobacco
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <label for="exclusion_gambling">
+                                            <input class="checkbox" type="checkbox" id="exclusion_gambling"> Gambling
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <label for="exclusion_animalfarming">
+                                            <input class="checkbox" type="checkbox" id="exclusion_animalfarming"> Intensive animal farming
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <label for="exclusion_animaltesting">
+                                            <input class="checkbox" type="checkbox" id="exclusion_animaltesting"> Animal testing for cosmetics
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <label for="exclusion_humanrights">
+                                            <input class="checkbox" type="checkbox" id="exclusion_humanrights"> Human rights violations
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <label for="exclusion_environment">
+                                            <input class="checkbox" type="checkbox" id="exclusion_environment"> Unmediated destruction of the environment
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <label for="exclusion_uranium">
+                                            <input class="checkbox" type="checkbox" id="exclusion_uranium"> Uranium mining and nuclear reactors
+                                        </label>
+                                    </div>
+                                    <input type="hidden" name="product[product_exclusion_ids][]" value=""> </div>
+                                <div class="form-group">
+                                    <label for="product_product_inclusion">Product inclusion</label>
+                                    <br>
+                                    <div class="checkbox-inline">
+                                        <label for="product_product_inclusion_ids_5750eccc82a1690006f541af">
+                                            <input class="checkbox" type="checkbox" value="5750eccc82a1690006f541af" name="product[product_inclusion_ids][]" id="product_product_inclusion_ids_5750eccc82a1690006f541af"> Inclusion 1
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <label for="product_product_inclusion_ids_5750ecd382a169000af541b1">
+                                            <input class="checkbox" type="checkbox" value="5750ecd382a169000af541b1" name="product[product_inclusion_ids][]" id="product_product_inclusion_ids_5750ecd382a169000af541b1"> Inclusion 2
+                                        </label>
+                                    </div>
+                                    <input type="hidden" name="product[product_inclusion_ids][]" value=""> </div>
+                                <div class="form-group">
+                                    <label for="product_methodology">Methodology</label>
+                                    <br>
+                                    <textarea name="product[methodology]" id="product_methodology" aria-hidden="true" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="product_holdings">Product Holdings</label>
+                                    <br>
+                                    <input class="form-control" type="text" name="product[holdings]" id="product_holdings">
+                                </div>
+                                <div class="form-group">
+                                    <label for="product_performance">Product Performance</label>
+                                    <br>
+                                    <input class="form-control" type="text" name="product[performance]" id="product_performance">
+                                </div>
+                                <div class="form-group">
+                                    <label for="product_url">Link to Product Website</label>
+                                    <br>
+                                    <input class="form-control" type="text" name="product[url]" id="product_url">
+                                </div>
+                                <div class="form-group">
+                                    <label class="file">Attach Supporting Documents
+                                        <input type="file" id="file">
+                                        <span class="file-custom"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="product_holdings">Product Holdings</label>
+                                    <br>
+                                    <textarea name="product[methodology]" id="product_holdings" aria-hidden="true" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="product_performance">Product Performance</label>
+                                    <br>
+                                    <textarea name="product[methodology]" id="product_performance" aria-hidden="true" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Contact Details</label>
+                                    <input class="form-control" type="text" name="" id="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" name="commit" value="Create Product" placeholder="">
+                                </div>
+                </form>
+                </div>
+                </div>
+                </form>
+</body>
+
+</html>
